@@ -942,43 +942,43 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
-        // Initialize Swiper Sliders
-        document.addEventListener('DOMContentLoaded', function () {
+    // Initialize Swiper Sliders
+document.addEventListener('DOMContentLoaded', function () {
+    
+    // Portfolio Slider (Auto-play with fade effect)
+    const portfolioSwiper = new Swiper('.portfolioSwiper', {
+        loop: true,
+        autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.portfolio-pagination',
+            clickable: true,
+        },
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+        speed: 1000,
+    });
 
-            // Portfolio Slider (Auto-play)
-            const portfolioSwiper = new Swiper('.portfolioSwiper', {
-                loop: true,
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false,
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                effect: 'fade',
-                fadeEffect: {
-                    crossFade: true
-                },
-                speed: 800,
-            });
-
-            // Testimonial Slider (Modern, No Arrows)
-            const testimonialSwiper = new Swiper('.testimonialSwiper', {
-                loop: true,
-                autoplay: {
-                    delay: 5000,
-                    disableOnInteraction: false,
-                },
-                pagination: {
-                    el: '.testimonial-pagination',
-                    clickable: true,
-                },
-                effect: 'slide',
-                speed: 600,
-                grabCursor: true,
-            });
-        });
+    // Testimonial Slider (Smooth auto-play)
+    const testimonialSwiper = new Swiper('.testimonialSwiper', {
+        loop: true,
+        autoplay: {
+            delay: 5500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.testimonial-pagination',
+            clickable: true,
+        },
+        effect: 'slide',
+        speed: 700,
+        grabCursor: true,
+    });
+});
     </script>
     <script>
         // Initialize AOS
