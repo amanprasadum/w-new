@@ -988,29 +988,29 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
-        // Initialize Swiper Sliders
-        document.addEventListener('DOMContentLoaded', function () {
+    // Initialize Swiper Sliders
+    document.addEventListener('DOMContentLoaded', function () {
 
-            // Services Slider (Auto-play with smooth transitions)
-            const portfolioSwiper = new Swiper('.portfolioSwiper', {
-                loop: true,
-                autoplay: {
-                    delay: 3500,
-                    disableOnInteraction: false,
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                effect: 'fade',
-                fadeEffect: {
-                    crossFade: true
-                },
-                speed: 800,
-            });
-
+        // Services Slider (Auto-play with smooth transitions)
+        const portfolioSwiper = new Swiper('.portfolioSwiper', {
+            loop: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+            speed: 800,
         });
-    </script>
+
+    });
+</script>
     <script>
         // Initialize AOS
         AOS.init({
