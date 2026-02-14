@@ -724,27 +724,26 @@
         color: var(--gray-900);
     } */
 /* ========================================
-       BRUTALIST HERO - ORIGINAL SIZE
+       BRUTALIST HERO - COMPACT & LIGHTER
    ======================================== */
 .hero-section {
-    background: #000;
+    background: #0a0a0a; /* Slightly lighter black */
     color: #fff;
-    min-height: 100vh;
-    padding: 0;
+    padding: 80px 0 40px; /* Reduced padding */
+    min-height: auto; /* Remove min-height */
 }
 
 .hero-brutalist {
-    padding: 100px 40px 40px;
+    padding: 40px 40px; /* Much less padding */
 }
 
 .hero-grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto auto;
+    grid-template-rows: 400px 200px; /* Fixed shorter heights */
     gap: 20px;
     max-width: 1600px;
     margin: 0 auto;
-    min-height: calc(100vh - 140px);
 }
 
 .grid-item {
@@ -752,38 +751,38 @@
 }
 
 /* ========================================
-       LEFT BOX - Main Content (ORIGINAL)
+       LEFT BOX - More Compact
    ======================================== */
 .main-content {
     grid-column: 1 / 7;
     grid-row: 1 / 2;
-    padding: 50px 40px;
+    padding: 35px 40px; /* Reduced padding */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .eyebrow {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     letter-spacing: 3px;
     font-weight: 700;
-    margin-bottom: 30px;
+    margin-bottom: 20px; /* Reduced */
     opacity: 0.8;
 }
 
 .hero-heading {
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: clamp(2rem, 4vw, 3.2rem); /* Smaller heading */
     font-weight: 900;
     line-height: 1.1;
-    margin: 0 0 25px 0;
+    margin: 0 0 20px 0; /* Reduced */
     letter-spacing: -0.02em;
 }
 
 .hero-description {
-    font-size: 1rem;
-    line-height: 1.7;
+    font-size: 0.95rem; /* Smaller text */
+    line-height: 1.6;
     opacity: 0.85;
-    margin-bottom: 40px;
+    margin-bottom: 30px; /* Reduced */
     max-width: 90%;
 }
 
@@ -797,10 +796,10 @@
 .brutal-btn {
     background: #fff;
     color: #000;
-    padding: 18px 35px;
+    padding: 16px 32px; /* Slightly smaller */
     text-decoration: none;
     font-weight: 900;
-    font-size: 1rem;
+    font-size: 0.95rem;
     letter-spacing: 1px;
     transition: all 0.3s;
     border: 3px solid #fff;
@@ -817,19 +816,19 @@
     display: flex;
     align-items: center;
     gap: 15px;
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     letter-spacing: 2px;
     opacity: 0.7;
 }
 
 .scroll-line {
-    width: 60px;
+    width: 50px;
     height: 2px;
     background: #fff;
 }
 
 /* ========================================
-       RIGHT BOX - Portfolio Slider (ORIGINAL)
+       RIGHT BOX - Portfolio Slider
    ======================================== */
 .image-stack {
     grid-column: 7 / 13;
@@ -864,41 +863,41 @@
 
 .image-label {
     position: absolute;
-    bottom: 20px;
-    right: 20px;
+    bottom: 15px;
+    right: 15px;
     background: #fff;
     color: #000;
-    padding: 10px 20px;
-    font-size: 0.7rem;
+    padding: 8px 16px;
+    font-size: 0.65rem;
     font-weight: 900;
     letter-spacing: 2px;
     z-index: 10;
 }
 
 .portfolioSwiper .swiper-pagination {
-    bottom: 60px;
+    bottom: 50px;
 }
 
 .portfolioSwiper .swiper-pagination-bullet {
     background: #fff;
     opacity: 0.5;
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
 }
 
 .portfolioSwiper .swiper-pagination-bullet-active {
     opacity: 1;
-    width: 30px;
-    border-radius: 5px;
+    width: 24px;
+    border-radius: 4px;
 }
 
 /* ========================================
-       BOTTOM LEFT - Stats Box (ORIGINAL)
+       BOTTOM LEFT - Stats Box (Compact)
    ======================================== */
 .stat-box {
     grid-column: 1 / 4;
     grid-row: 2 / 3;
-    padding: 35px 30px;
+    padding: 30px 25px; /* Reduced */
     background: #fff;
     color: #000;
     display: flex;
@@ -907,26 +906,26 @@
 }
 
 .big-number {
-    font-size: 4rem;
+    font-size: 3.5rem; /* Smaller */
     font-weight: 900;
     line-height: 1;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .stat-text {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: 1px;
 }
 
 /* ========================================
-       BOTTOM RIGHT - Testimonial (ONLY THIS CHANGED - COLORFUL)
+       BOTTOM RIGHT - Testimonial (Colorful & Compact)
    ======================================== */
 .quote-box {
     grid-column: 4 / 13;
     grid-row: 2 / 3;
     padding: 0;
-    background: var(--gray-50);
+    background: #2a2a2a; /* Lighter dark gray instead of black */
     position: relative;
     overflow: hidden;
     border: 3px solid #fff;
@@ -935,7 +934,7 @@
 .testimonialSwiper {
     width: 100%;
     height: 100%;
-    padding: 40px 50px;
+    padding: 30px 40px; /* Reduced padding */
 }
 
 .testimonialSwiper .swiper-slide {
@@ -944,12 +943,12 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 25px;
+    padding: 20px; /* Reduced */
     border-radius: 16px;
     transition: all 0.3s;
 }
 
-/* ONLY CHANGE: Colorful backgrounds */
+/* Colorful backgrounds using your variables */
 .slide-pink {
     background: linear-gradient(135deg, var(--pink-100) 0%, var(--pink-200) 100%);
 }
@@ -967,8 +966,8 @@
 }
 
 .quote-icon {
-    font-size: 3rem;
-    margin-bottom: 20px;
+    font-size: 2.5rem; /* Smaller icon */
+    margin-bottom: 15px;
     animation: float 3s ease-in-out infinite;
 }
 
@@ -977,15 +976,15 @@
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-10px);
+        transform: translateY(-8px);
     }
 }
 
 .testimonialSwiper p {
-    font-size: 1.15rem;
-    line-height: 1.7;
-    margin-bottom: 25px;
-    color: var(--gray-800);
+    font-size: 1rem; /* Smaller text */
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: var(--gray-900);
     font-weight: 500;
     max-width: 90%;
     margin-left: auto;
@@ -993,44 +992,48 @@
 }
 
 .author {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 800;
     color: var(--gray-900);
-    margin-bottom: 5px;
+    margin-bottom: 4px;
 }
 
 .author-title {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     color: var(--gray-600);
     font-weight: 600;
 }
 
 .testimonial-pagination {
-    bottom: 15px !important;
+    bottom: 12px !important;
 }
 
 .testimonialSwiper .swiper-pagination-bullet {
     background: var(--gray-400);
     opacity: 0.6;
-    width: 10px;
-    height: 10px;
-    margin: 0 6px !important;
+    width: 8px;
+    height: 8px;
+    margin: 0 5px !important;
     transition: all 0.3s;
 }
 
 .testimonialSwiper .swiper-pagination-bullet-active {
     background: var(--gray-900);
     opacity: 1;
-    width: 30px;
-    border-radius: 5px;
+    width: 24px;
+    border-radius: 4px;
 }
 
 /* ========================================
-       RESPONSIVE (ORIGINAL)
+       RESPONSIVE
    ======================================== */
 @media (max-width: 1200px) {
     .hero-brutalist {
-        padding: 80px 30px 30px;
+        padding: 30px 30px;
+    }
+    
+    .hero-grid {
+        grid-template-rows: 380px 190px;
     }
     
     .main-content {
@@ -1051,37 +1054,42 @@
 }
 
 @media (max-width: 991px) {
+    .hero-section {
+        padding: 60px 0 30px;
+    }
+    
     .hero-grid {
         grid-template-columns: 1fr;
+        grid-template-rows: auto;
         gap: 15px;
     }
     
     .grid-item {
         grid-column: 1 / -1 !important;
         grid-row: auto !important;
-        min-height: 300px;
+        min-height: 280px;
     }
     
     .main-content {
-        min-height: 400px;
-    }
-    
-    .image-stack {
         min-height: 350px;
     }
     
+    .image-stack {
+        min-height: 300px;
+    }
+    
     .stat-box {
-        min-height: 200px;
+        min-height: 180px;
     }
     
     .quote-box {
-        min-height: 250px;
+        min-height: 220px;
     }
     
     .action-bar {
         flex-direction: column;
         align-items: flex-start;
-        gap: 20px;
+        gap: 15px;
     }
     
     .scroll-indicator {
@@ -1089,33 +1097,33 @@
     }
     
     .testimonialSwiper {
-        padding: 40px 30px;
+        padding: 25px 30px;
     }
 }
 
 @media (max-width: 576px) {
     .hero-brutalist {
-        padding: 60px 20px 20px;
+        padding: 20px 20px;
     }
     
     .main-content {
-        padding: 30px 25px;
+        padding: 25px 20px;
     }
     
     .hero-heading {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     
     .testimonialSwiper {
-        padding: 30px 25px;
+        padding: 20px 20px;
     }
     
     .testimonialSwiper p {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
     
     .quote-icon {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 }
     /* ========================================
