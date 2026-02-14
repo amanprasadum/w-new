@@ -724,11 +724,11 @@
         color: var(--gray-900);
     } */
 /* ========================================
-       BRUTALIST HERO - REFINED
+       MODERN SAAS HERO DESIGN
    ======================================== */
 .hero-section {
-    background: #000;
-    color: #fff;
+    background: linear-gradient(135deg, var(--gray-50) 0%, var(--blue-50) 100%);
+    color: var(--gray-900);
     min-height: 100vh;
     padding: 0;
 }
@@ -748,11 +748,14 @@
 }
 
 .grid-item {
-    border: 3px solid #fff;
+    border: 2px solid var(--gray-200);
+    border-radius: 16px;
+    background: var(--white);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
 }
 
 /* ========================================
-       LEFT BOX - Main Content (Cleaner)
+       LEFT BOX - Main Content
    ======================================== */
 .main-content {
     grid-column: 1 / 7;
@@ -761,6 +764,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background: linear-gradient(135deg, var(--white) 0%, var(--blue-50) 100%);
 }
 
 .eyebrow {
@@ -768,7 +772,8 @@
     letter-spacing: 3px;
     font-weight: 700;
     margin-bottom: 30px;
-    opacity: 0.8;
+    color: var(--primary);
+    opacity: 1;
 }
 
 .hero-heading {
@@ -777,12 +782,13 @@
     line-height: 1.1;
     margin: 0 0 25px 0;
     letter-spacing: -0.02em;
+    color: var(--gray-900);
 }
 
 .hero-description {
     font-size: 1rem;
     line-height: 1.7;
-    opacity: 0.85;
+    color: var(--gray-600);
     margin-bottom: 40px;
     max-width: 90%;
 }
@@ -795,22 +801,25 @@
 }
 
 .brutal-btn {
-    background: #fff;
-    color: #000;
+    background: var(--primary);
+    color: var(--white);
     padding: 18px 35px;
     text-decoration: none;
-    font-weight: 900;
+    font-weight: 700;
     font-size: 1rem;
-    letter-spacing: 1px;
-    transition: all 0.3s;
-    border: 3px solid #fff;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    border: 2px solid var(--primary);
+    border-radius: 8px;
     display: inline-block;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
 }
 
 .brutal-btn:hover {
-    background: #000;
-    color: #fff;
-    transform: translateX(5px);
+    background: #2563eb;
+    border-color: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
 }
 
 .scroll-indicator {
@@ -819,17 +828,17 @@
     gap: 15px;
     font-size: 0.7rem;
     letter-spacing: 2px;
-    opacity: 0.7;
+    color: var(--gray-500);
 }
 
 .scroll-line {
     width: 60px;
     height: 2px;
-    background: #fff;
+    background: var(--gray-300);
 }
 
 /* ========================================
-       RIGHT BOX - Portfolio Slider
+       RIGHT BOX - Services Slider
    ======================================== */
 .image-stack {
     grid-column: 7 / 13;
@@ -848,39 +857,63 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 40px;
+    position: relative;
 }
 
-.portfolioSwiper img {
+.service-slide {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    filter: grayscale(100%);
-    transition: filter 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 12px;
+    padding: 40px;
+    transition: transform 0.3s ease;
 }
 
-.portfolioSwiper .swiper-slide-active img {
-    filter: grayscale(0%);
+.service-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
 }
 
-.image-label {
+.service-slide h3 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+    color: var(--gray-900);
+}
+
+.service-slide p {
+    font-size: 1rem;
+    color: var(--gray-600);
+    max-width: 300px;
+}
+
+.slide-label {
     position: absolute;
     bottom: 20px;
     right: 20px;
-    background: #fff;
-    color: #000;
+    background: var(--white);
+    color: var(--gray-900);
     padding: 10px 20px;
     font-size: 0.7rem;
     font-weight: 900;
     letter-spacing: 2px;
     z-index: 10;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .portfolioSwiper .swiper-pagination {
-    bottom: 60px;
+    bottom: 20px;
 }
 
 .portfolioSwiper .swiper-pagination-bullet {
-    background: #fff;
+    background: var(--gray-400);
     opacity: 0.5;
     width: 10px;
     height: 10px;
@@ -888,22 +921,25 @@
 
 .portfolioSwiper .swiper-pagination-bullet-active {
     opacity: 1;
+    background: var(--primary);
     width: 30px;
     border-radius: 5px;
 }
 
 /* ========================================
-       BOTTOM LEFT - Stats Box (Reduced)
+       BOTTOM LEFT - Stats Box
    ======================================== */
 .stat-box {
     grid-column: 1 / 4;
     grid-row: 2 / 3;
     padding: 35px 30px;
-    background: #fff;
-    color: #000;
+    background: linear-gradient(135deg, var(--primary) 0%, #2563eb 100%);
+    color: var(--white);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border: none;
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
 }
 
 .big-number {
@@ -917,66 +953,78 @@
     font-size: 0.85rem;
     font-weight: 700;
     letter-spacing: 1px;
+    opacity: 0.9;
 }
 
 /* ========================================
-       BOTTOM RIGHT - Testimonial Slider (Increased)
+       BOTTOM RIGHT - Tech Logos Infinite Scroll
    ======================================== */
 .quote-box {
     grid-column: 4 / 13;
     grid-row: 2 / 3;
     padding: 0;
-    background: #222;
+    background: var(--white);
     position: relative;
     overflow: hidden;
 }
 
-.testimonialSwiper {
+.tech-logos-wrapper {
     width: 100%;
     height: 100%;
-    padding: 40px 60px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 0 20px;
 }
 
-.testimonialSwiper .swiper-slide {
+.tech-logos-scroll {
+    display: flex;
+    gap: 60px;
+    animation: scroll 30s linear infinite;
+    will-change: transform;
+}
+
+.tech-logo-item {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-}
-
-.testimonialSwiper p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    margin-bottom: 20px;
-    font-style: italic;
-}
-
-.author {
-    font-size: 0.85rem;
+    align-items: center;
+    gap: 12px;
+    min-width: 100px;
     opacity: 0.7;
-    font-style: normal;
+    transition: all 0.3s ease;
+}
+
+.tech-logo-item:hover {
+    opacity: 1;
+    transform: translateY(-5px);
+}
+
+.tech-logo-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    filter: grayscale(20%);
+}
+
+.tech-logo-item span {
+    font-size: 0.85rem;
     font-weight: 600;
+    color: var(--gray-700);
+    white-space: nowrap;
 }
 
-.testimonialSwiper .swiper-button-next,
-.testimonialSwiper .swiper-button-prev {
-    color: #fff;
-    width: 40px;
-    height: 40px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px solid #fff;
-    border-radius: 50%;
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
-.testimonialSwiper .swiper-button-next:after,
-.testimonialSwiper .swiper-button-prev:after {
-    font-size: 16px;
-    font-weight: 900;
-}
-
-.testimonialSwiper .swiper-button-next:hover,
-.testimonialSwiper .swiper-button-prev:hover {
-    background: #fff;
-    color: #000;
+/* Pause animation on hover */
+.tech-logos-wrapper:hover .tech-logos-scroll {
+    animation-play-state: paused;
 }
 
 /* ========================================
@@ -1029,7 +1077,7 @@
     }
     
     .quote-box {
-        min-height: 250px;
+        min-height: 200px;
     }
     
     .action-bar {
@@ -1040,6 +1088,10 @@
     
     .scroll-indicator {
         display: none;
+    }
+    
+    .tech-logos-scroll {
+        gap: 40px;
     }
 }
 
@@ -1056,12 +1108,30 @@
         font-size: 2rem;
     }
     
-    .testimonialSwiper {
-        padding: 30px 40px;
+    .service-slide {
+        padding: 30px 20px;
     }
     
-    .testimonialSwiper p {
-        font-size: 0.95rem;
+    .service-slide h3 {
+        font-size: 1.4rem;
+    }
+    
+    .service-icon {
+        font-size: 3rem;
+    }
+    
+    .tech-logo-item {
+        min-width: 80px;
+        gap: 8px;
+    }
+    
+    .tech-logo-item img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .tech-logos-scroll {
+        gap: 30px;
     }
 }
     /* ========================================
